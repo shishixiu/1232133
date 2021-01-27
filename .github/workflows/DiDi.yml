@@ -17,9 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      DiDi: ${{ secrets.#DiDi }}
-      DiDi_city: ${{ secrets.#DiDi_city }}
-      Didi_noaff: ${{ secrets.noaff }}
+      DiDi: ${{ secrets.DiDi }}
+      DiDi_city: ${{ secrets.DiDi_city }}
+ 
           
     steps:
       - uses: actions/checkout@v1
@@ -36,7 +36,7 @@ jobs:
         run: |
           node Task/DiDi/DiDi_new.js
         env:
-          DiDi: ${{ secrets.#DiDi }}
+          DiDi: ${{ secrets.DiDi }}
           SCKEY: ${{ secrets.SCKEY }}
           
 
