@@ -36,7 +36,8 @@ jobs:
         run: |
           node Task/DiDi/DiDi_new.js
         env:
-          DiDi: ${{ secrets.DiDi }}
+          DiDi: ${{ secrets.Token }}
+          DiDi_city: ${{ secrets.DiDi_city }}
           SCKEY: ${{ secrets.SCKEY }}
           
 
